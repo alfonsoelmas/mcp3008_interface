@@ -36,7 +36,7 @@ int mcpSetup()
     return 0;
 }
 
-int mcpClose()
+void mcpClose()
 {
     close(myFd);
 }
