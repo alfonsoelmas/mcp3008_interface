@@ -74,7 +74,7 @@ int    mcpSetup();
 /*
     Cierra la conexion ISP con la MCP.
 */
-int mcpClose();
+void mcpClose();
 
 
 #endif
