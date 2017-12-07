@@ -15,10 +15,10 @@ Este código está bajo licencia Apache
     MCP3008 VREF to Raspberry Pi 3.3V
     MCP3008 AGND to Raspberry Pi GND
     MCP3008 DGND to Raspberry Pi GND
-    MCP3008 CLK to Raspberry Pi pin 18
-    MCP3008 DOUT to Raspberry Pi pin 23
-    MCP3008 DIN to Raspberry Pi pin 24
-    MCP3008 CS/SHDN to Raspberry Pi pin 25
+    MCP3008 CLK to Raspberry Pi pin 23 (gpio 11)
+    MCP3008 DOUT to Raspberry Pi pin 21 (gpio 9)
+    MCP3008 DIN to Raspberry Pi pin 19 (gpio 10)
+    MCP3008 CS/SHDN to Raspberry Pi pin 24 (gpio 8)
 
         CH0     -1=========16-      VDD
         CH1     -2    M    15-      VREF
@@ -34,10 +34,10 @@ Este código está bajo licencia Apache
 #ifndef MCP3008
 #define MCP3008
 
-#define CLK 18
-#define DOUT 23
-#define DIN 24
-#define CS_SHDN 25
+#define CLK 23
+#define DOUT 21
+#define DIN 19
+#define CS_SHDN 24
 
 #define CHAN_CONFIG_SINGLE  8
 #define CHAN_CONFIG_DIFF    0
