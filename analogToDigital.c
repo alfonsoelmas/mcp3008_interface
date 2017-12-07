@@ -10,7 +10,7 @@ Este código está bajo licencia Apache
 
 
 
-int analogRead(int canal)
+int analogReadMCP(int canal)
 {
     if(canal<0 || canal>7)
         return -1;
@@ -20,7 +20,7 @@ int analogRead(int canal)
     return ( (buffer[1] & 3 ) << 8 ) + buffer[2]; 
 }
 
-int analogWrite(int canal, int valor)
+int analogWriteMCP(int canal, int valor)
 {
     /*Función no implementada de momento*/
     return -1;

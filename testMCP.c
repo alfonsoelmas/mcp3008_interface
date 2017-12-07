@@ -12,7 +12,7 @@ int main()
 {
 	mcpSetup();
 	printf("Leemos valor canal 0: ");
-	int valor = analogRead(0);
+	int valor = analogReadMCP(0);
 
 	if(valor>=0 && valor<=1030)
 		printf("%d", valor);
