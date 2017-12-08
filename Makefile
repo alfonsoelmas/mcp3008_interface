@@ -5,7 +5,7 @@
 #Macros:
 
 CC = gcc
-CFLAGS = -g -Wall -O2
+CFLAGS = -g -Wall -O2 -lwiringPi
 SRC = testMCP.c analogToDigital.c analogToDigital.h
 OBJ = testMCP.o analogToDigital.o
 

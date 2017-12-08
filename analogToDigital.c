@@ -28,7 +28,7 @@ int analogWriteMCP(int canal, int valor)
 
 int mcpSetup()
 {                       
-    if ((myFd = wiringPiSPISetup (CANAL0, 1000000)) < 0)//1000000 == Frecuencia del reloj
+    if ((myFd = wiringPiSPISetup (0, 1000000)) < 0)//1000000 == Frecuencia del reloj
     {
         return -1;
     }

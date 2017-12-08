@@ -10,13 +10,22 @@ Este código está bajo licencia Apache
 //Test de prueba de interfaz MCP3008
 int main()
 {
+	wiringPiSetup();
 	mcpSetup();
-	printf("Leemos valor canal 0: ");
-	int valor = analogReadMCP(0);
+	while(1)
+	{
+		int i;
+		for(i=0; i<8; i++)
+		{
+			printf("Canal %d: ",i);
+			int valor = analogReadMCP(i);
 
-	if(valor>=0 && valor<=1030)
-		printf("%d", valor);
-	else printf("ERROR");
+			if(valor>=0 && valor<=1030)
+				printf("%d\n ", valor);
+			else printf("ERROR");
+		}
+		delay(1000);
+	}
 
 	mcpClose();
 }
