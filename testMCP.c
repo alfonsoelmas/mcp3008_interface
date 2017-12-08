@@ -12,19 +12,16 @@ int main()
 {
 	wiringPiSetup();
 	mcpSetup();
-	while(1)
-	{
-		int i;
-		for(i=0; i<8; i++)
-		{
-			printf("Canal %d: ",i);
-			int valor = analogReadMCP(i);
 
-			if(valor>=0 && valor<=1030)
-				printf("%d\n ", valor);
-			else printf("ERROR");
-		}
-		delay(1000);
+	int i;
+	for(i=0; i<8; i++)
+	{
+		printf("Canal %d: ",i);
+		int valor = analogReadMCP(i);
+
+		if(valor>=0 && valor<=1030)
+			printf("%d\n ", valor);
+		else printf("ERROR");
 	}
 
 	mcpClose();
