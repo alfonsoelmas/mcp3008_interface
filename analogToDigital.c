@@ -14,9 +14,13 @@ int analogReadMCP(int canal)
 {
     if(canal<0 || canal>7)
         return -1;
+
     unsigned char buffer[3] = {1};
+
     buffer[1] = (CHAN_CONFIG_SINGLE + canal) << 4;
+
     wiringPiSPIDataRW(0, buffer, 3);
+
     return ( (buffer[1] & 3 ) << 8 ) + buffer[2]; 
 }
 
@@ -28,7 +32,7 @@ int analogWriteMCP(int canal, int valor)
 
 int mcpSetup()
 {                       
-    if ((myFd = wiringPiSPISetup (0, 1000000)) < 0)//1000000 == Frecuencia del reloj
+    if ((myFd = wiringPiSPISetup (0, 1000000)) < 0)		//1000000 == Frecuencia del reloj
     {
         return -1;
     }
