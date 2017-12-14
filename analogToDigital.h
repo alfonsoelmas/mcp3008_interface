@@ -76,5 +76,15 @@ int    mcpSetup();
 */
 void mcpClose();
 
+/*
+	Transforma el valor al voltaje de referencia.
+		INPUT:
+			int data: Dato de voltaje en ADC. (Entre 0 y 1024).
+		OUTPUT:
+			float voltaje: Voltaje referente. (3.3 voltios de referencia). (Entre 0 y 3.3). -1 si error de operacion.
+*/
+float dataToVolt(int data);
+
+
 
 #endif

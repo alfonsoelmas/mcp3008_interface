@@ -40,6 +40,22 @@ int mcpSetup()
     return 0;
 }
 
+
+float dataToVolt(int data)
+{
+	if(data < 0 || data > 1024)
+	{
+		return -1;
+		
+	}
+	
+	return (data*3.3) / float(1023);
+	
+}
+
+
+
+
 void mcpClose()
 {
     close(myFd);
